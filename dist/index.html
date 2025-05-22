@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookstore</title>
+</head>
+<body>
+    <header class="header">
+        <p class="logo">Bookshop</p>
+        <div class="header-menu">
+            <ul class="header-list">
+                <li class="header-item active-item"><a href="">books</a></li>
+                <li class="header-item"><a href="">audiobooks</a></li>
+                <li class="header-item"><a href="">stationery & gift</a></li>
+                <li class="header-item"><a href="">blog</a></li>
+            </ul>
+        </div>
+        <div class="header-icons">
+            <img class="header-icons_set" src="./images/user.svg" alt="icon-header">
+            <img class="header-icons_set" src="./images/search.svg" alt="icon-header">
+            <div class="shop-bag">
+                <img class="header-icons_set" src="./images/shop-bag.svg" alt="icon-header">
+                <div class="items-number"></div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+    <section class="sectionOne">
+        <div class="slider">
+            <div class="general-slides" id="slides">
+                <div class="slide showing">    <!--слайд 1 -->
+                    <img class="slider-baner" src="./images/banner.png" alt="photo">
+                    <div class="promo-container">
+                        <img class="slider-baner_promo1" src="./images/promo1.svg" alt="promo-img">
+                        <img class="slider-baner_promo2" src="./images/promo2.svg" alt="promo-img">
+                    </div>
+                </div>
+                <div class="slide">    <!--слайд 2 -->
+                    <img class="slider-baner" src="./images/banner2.png" alt="photo">
+                </div>
+                <div class="slide">    <!--слайд 3 -->
+                    <img class="slider-baner" src="./images/banner3.png" alt="photo">
+                </div>
+            </div>
+            <ol class="slider-indicators" id="indicators">
+                <li class="slider-indicator indicator-active"></li>
+                <li class="slider-indicator"></li>
+                <li class="slider-indicator"></li>
+            </ol>
+        </div>
+    </section>
+    <section class="books">
+        <div class="conteiner-list">
+            <ul class="books__list">
+                <li class="books__category active">Architecture</li>
+                <li class="books__category">Art &amp; Fashion</li>
+                <li class="books__category">Biography</li>
+                <li class="books__category">Business</li>
+                <li class="books__category">Crafts &amp; Hobbies</li>
+                <li class="books__category">Drama</li>
+                <li class="books__category">Fiction</li>
+                <li class="books__category">Food &amp; Drink</li>
+                <li class="books__category">Health &amp; Wellbeing</li>
+                <li class="books__category">History &amp; Politics</li>
+                <li class="books__category">Humor</li>
+                <li class="books__category">Poetry</li>
+                <li class="books__category">Psychology</li>
+                <li class="books__category">Science</li>
+                <li class="books__category">Technology</li>
+                <li class="books__category">Travel &amp; Maps</li>
+            </ul>
+        </div>
+        <div class="books__container">
+            <div class="books__arrow">
+                <ul class="books__cards"></ul>
+            </div>
+            <button class="btn books__load-btn">load more</button>
+        </div>
+        
+    </section>
+    </main>
+    <script src="./scripts.js"></script>
+</body>
+</html>

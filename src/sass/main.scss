@@ -1,0 +1,300 @@
+@use './font.scss';
+@use './reset.scss';
+
+$indicator: 12px;
+
+/*color*/
+$body-color: #FFFFFF;
+$color-text: #5C6A79;
+$bold-text: #1C2A39;
+$indicator-background: #EFEEF6;
+$bacground-books: #EFEEF6;
+
+
+// _button.scss
+$button-color: #4C3DB2;
+$button-color_hover: #EEEDF5;
+$button-text_hover: #5C6A79;
+
+
+.btn {
+    color: $button-color;
+    border: $button-color solid 1px;
+    cursor: pointer;
+    width: 176px;
+    height: 45px;
+    text-transform: uppercase;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 8px;
+    background-color: $body-color;
+
+    &:hover {
+        background-color: $bacground-books;
+    }
+}
+
+/*1440px*/
+
+body {
+    background-color: $body-color;
+    display: flex;
+    justify-content: center;
+
+    .header{
+        width: 1120px;
+        height: 116px;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+
+        .logo{
+            font-family: 'Montserrat-Bold', sans-serif;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .header-menu{
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+
+            .header-list{
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                
+                .header-item{
+                    font-family: 'Montserrat-Bold', sans-serif;
+                    color: $color-text;
+                    font-size: 10px;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+
+                .active-item {
+                    color: $bold-text;
+                    font-family: 'Montserrat-Black', sans-serif;;
+                }
+            }
+        }
+
+        .header-icons{
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            
+            .header-icons_set{
+                width: 15px;
+                height: 17px;
+                cursor: pointer;
+            }
+
+            .shop-bag{
+                position: relative;
+
+                .items-number {
+                    position: absolute;
+                    bottom: -3px;  
+                    right: -3px; 
+                    background-color: #FF353A;
+                    color: #FFFFFF;
+                    border-radius: 50%; 
+                    width: 13px; 
+                    height: 13px; 
+                    display: flex;
+                    align-items: center; 
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+.sectionOne{
+    margin-top: 116px;
+
+        .slider{
+            position: relative;
+            width: 100%;
+            margin: auto;
+
+            .general-slides{
+                display: flex;
+                transition: transform 0.5s ease;
+                margin-bottom: 17px;
+                position: relative;
+                justify-content: center;
+
+                .promo-container {
+                    position: relative;
+                    overflow: visible;
+                    top: -60%;
+                    right: -10%;
+
+                    .slider-baner_promo1{
+                        position: absolute;
+                        top: -210px;
+                        left: 926px;
+                    }
+
+                    .slider-baner_promo2{
+                        position: absolute;
+                        top: 70px;
+                        right: -39px;
+                    }
+                }
+
+                .slide {
+                    position: relative;
+                    display: none;
+                }
+                .slide.showing {
+                    display: block; 
+                }
+                .slider-baner{
+                    width: 1120px;
+                    height: 702px;
+                }
+            }
+            .slider-indicators{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                gap: 10px;
+            
+                .slider-indicator{
+                    flex: 0 1 auto;
+                    width: $indicator;
+                    height: $indicator;
+                    border-radius: 50%;
+                    background-color: $indicator-background;
+                    cursor: pointer;
+                }
+            
+                .indicator-active {
+                    background-color: #9E98DC;
+                }
+            }
+        }
+}
+
+.books {
+    margin-top: 105px;
+    margin-bottom: 50px;
+    width: 1120px;
+
+    &__list {
+        width: 416px;
+        height: 710px;
+        background-color: #EFEEF6;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        flex-direction: column;
+        gap: 23px;
+        margin-left: -14%;
+
+        .books__category {
+            text-align: left;
+            font-family: 'Montserrat-Medium', sans-serif;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 160px;
+        }
+
+        .active {
+            font-size: 16px;
+            font-family: 'Montserrat-Bold', sans-serif;
+            list-style-type: disc;
+        }
+        .active::marker {
+            color: #756AD3;
+            font-size: 20px;
+        }
+    }
+
+    .books__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: -664px;
+        margin-left: 196px;
+        position: absolute;
+        align-items: center;
+
+        .books__load-btn{
+            margin-bottom: 74px;
+        }
+
+        .books__arrow{
+            width: 924px;
+
+            .books__cards{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                .books__card{
+                    width: 424px;
+                    height: 300px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0px 76px 96px 0px;
+
+                    .books__card-img{
+                        width: 210px;
+                        opacity: 100%;
+                        box-shadow: 0 14px 8px #EEECEC;
+                    }
+
+                    .books__info-box{
+                        width: 176px;
+                        height: 203px;
+                        font-family: 'OpenSans-Regular', sans-serif;
+                        font-size: 10px;
+                        color: $color-text;
+                        
+                        .books__title{
+                            font-family: 'Monserat-Bold';
+                            font-size: 16px;
+                            color: $bold-text;
+                            margin-bottom: 4px;
+                        }
+
+                        .books__author{
+                            margin-bottom: 4px;
+                        }
+
+                        .books__reviews{
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                        }
+
+                        .books__about, .books__price, .books__btn {
+                            margin-top: 16px;
+                        }
+
+                        .books__btn.pressed {
+                            color: $button-text_hover;
+                            border-color: #EEEDF5;
+                        }
+
+                        .books__price{
+                            font-size: 16px;
+                            color: $bold-text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
